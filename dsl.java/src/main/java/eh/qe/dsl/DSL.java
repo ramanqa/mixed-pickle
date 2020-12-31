@@ -15,7 +15,7 @@ public class DSL{
     }
 
     @Async
-    @Loggable
+    //@Loggable
     public Future<String> futureMessage(String m, Integer t){
         System.out.println("in futureMessage method ("+m+")");
         try{Thread.sleep(t);}catch(Exception e){}
