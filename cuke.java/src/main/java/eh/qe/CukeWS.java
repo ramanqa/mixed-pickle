@@ -31,7 +31,7 @@ public class CukeWS{
         this.cukeWS.ws("/:lang", ws -> {
         
           ws.onConnect(context -> {
-              System.out.println("Connected...as.as.sa.");
+              System.out.println("Connected." + context.pathParam("lang"));
               this.wsConnections.put(context.pathParam("lang"), context);
           });
 

@@ -6,4 +6,5 @@ public class World {
   
     String state;
     CukeWS cukeWS;
+    Process jsLangBridgeProcess;
 }
