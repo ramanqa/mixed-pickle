@@ -12,7 +12,7 @@ public class SecondStepDefinition {
     }
 
     @Given("[{lang}] I eat")
-    public void i_have_x_cucumbers(Language lang){
+    public void i_have_x_cucumbers(LangBridge lang){
         System.out.println("MeState : " + this.world.state);
     }
 }

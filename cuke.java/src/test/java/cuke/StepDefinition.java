@@ -1,6 +1,5 @@
 package cuke;
 
-import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.*;
 
 public class StepDefinition{
@@ -12,14 +11,12 @@ public class StepDefinition{
     }
 
     @Given("[{lang}] abc")
-    public void abc(Language lang) {
-        System.out.println(lang);
-        System.out.println("Cucumber done");
+    public void abc(LangBridge lang) {
     }
 
     @Given("[{lang}] I have {} cucumbers")
-    public void i_have_x_cucumbers(Language lang, String xCucumbers){
-        System.out.println(lang.send("MEMEMEMEMMEME"));
+    public void i_have_x_cucumbers(LangBridge lang, String xCucumbers){
+        System.out.println(lang.execute("MEMEMEMEMMEME"));
     }
 
 }

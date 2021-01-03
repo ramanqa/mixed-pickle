@@ -16,8 +16,8 @@ public class BaseStepDefinition{
     }
 
     @ParameterType(".*")
-    public Language lang(String language){
-        return new Language(this.world, language);
+    public LangBridge lang(String language){
+        return new LangBridge(this.world, language);
     }
 
     @Before
