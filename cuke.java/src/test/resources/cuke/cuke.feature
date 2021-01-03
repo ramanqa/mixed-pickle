@@ -1,5 +1,6 @@
 Feature: ABC
 
-Scenario: First Cuke
-  Given I have 10 cucumbers
-  Then I eat
+Scenario Outline: First Cuke
+  Given [JS] abc
+  Given [JS] I have 10 cucumbers
+  Then [JS] I eat

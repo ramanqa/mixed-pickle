@@ -1,15 +1,25 @@
 # mixed-pickle
 
-
-## Command schema
-{
-  "language": "[java/python/go/javascript]",
-  "action": "",
-  "params": paramsObject
+## Command messaging
+### command request
+{ 
+  uuid: [MESSAGE_UUID], 
+  from: [cuke/js/java/py/go],
+  to: [cuke/js/java/py/go],
+  message: {
+    status: [0/1/-1],
+    action: "",
+    params: {}
+  }
 }
 
-## Command response schema
+### command response
 {
-  "status": [0/1/-1],
-  "message": returnObject
+  uuid: [REQUEST_MESSAGE_UUID],
+  from: [cuke/js/java/py/go],
+  to: [cuke/js/java/py/go],
+  message : {
+    status: [0/1/-1],
+    response: {}
+  }
 }

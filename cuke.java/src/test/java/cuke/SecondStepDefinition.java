@@ -1,17 +1,18 @@
 package cuke;
 
+import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.*;
 
-public class SecondStepDefinition{
+public class SecondStepDefinition {
 
-    private World world;
+    protected World world;
 
     public SecondStepDefinition(World world){
         this.world = world;
     }
 
-    @Given("^I eat$")
-    public void i_have_x_cucumbers(){
+    @Given("[{lang}] I eat")
+    public void i_have_x_cucumbers(Language lang){
         System.out.println("MeState : " + this.world.state);
     }
 }
