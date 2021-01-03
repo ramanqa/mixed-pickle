@@ -1,10 +1,8 @@
-const uuid = require('uuid').v4;
-
 exports.Session = class {
 
-  constructor(sessionName) {
+  constructor(sessionName, sessionId) {
     this.name = sessionName;
-    this.id = uuid();
+    this.id = sessionId;
   }
 
 }
